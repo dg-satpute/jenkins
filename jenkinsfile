@@ -7,16 +7,19 @@ pipeline {
         stage ("Build") {
             steps {
                 echo 'building the application..'
+                echo "building version is {NEW_VERSION}"
             }
         }
         stage ("Test") {
             steps {
                 echo "testing the application.."
+                echo "testing version is {NEW_VERSION}"
             }
         }
         stage ("Deploy") {
             steps {
                 echo "deploying the application.."
+                echo "deploying version is {NEW_VERSION}"
             }
         }
     }
